@@ -23,7 +23,16 @@ fn main() {
     if args.len() > 1 {
         match args[1].as_str() {
             // new days are added here
+            
+            "1" => {
+                if args[2].as_str() == "1" {
+                    one::one::run();
+                } else {
+                    one::two::run();
+                }
+            }
             _ => println!("re read the README.md perhaps?"),
+            
         }
     } else {
         println!("yeah read the README.md I reckon");
